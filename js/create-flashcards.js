@@ -4,7 +4,6 @@ let divArray = [];
 function addNewCard() {
     // update divArray
     createNewEl(divArray.length);
-    divArray.push(updateDiv(divArray.length, elValue(divArray.length, "term"), elValue(divArray.length, "def")));
 }
 
 // Helper Functions for Adding Cards
@@ -31,6 +30,13 @@ function createNewCard(div, term, def) {
     div.appendChild(def);
 }
 
+
+function createDeck() {
+
+    cardDiv.innerHTML = "";
+}
+
+// Helper Functions for Creating New Decks
 function elValue(i, element) {
     let elValue = document.getElementById(`${element}-${i}`);
     return elValue.value;
@@ -43,10 +49,3 @@ function updateDiv(i, term, def) {
         def: def,
     };
 }
-
-function createDeck() {
-
-    cardDiv.innerHTML = "";
-}
-
-// Helper Functions for Creating New Decks
