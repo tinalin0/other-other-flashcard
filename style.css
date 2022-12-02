@@ -1,0 +1,34 @@
+
+/* LOGIN AND SIGNIN */
+#sign-up-div {
+    display: block;
+}
+
+#login-div {
+    display: none;
+}
+
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* MAIN INTERFACE */
+
+/* HOMEPAGE */
+#home-div {
+    display: none;
+}
+
+/* QUIZING */
+#flashcards-div {
+    display: none;
+}
+
+/* Create Flashcards */
+#create-flashcards-div {
+    display: none;
+}
+

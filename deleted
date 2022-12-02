@@ -1,0 +1,15 @@
+// function createNewEl(i) {
+//     let divBegin = `<div class="card-div" id="card-${i}>`
+//     let divEnd = `</div>`
+//     let inTerm = `<input type="text" id="term-${i}" placeholder="Term">`
+//     let inDef = `<input type="text" id="def-${i}" placeholder="Definition">`
+//     divArray.push(createNewCard(divBegin, divEnd, inTerm, inDef));
+// }
+
+// function arrayToString() {
+//     let arrayString = "";
+//     for (let i = 0; i < divArray.length; i++) {
+//         arrayString = arrayString + divArray.divStart + divArray.term + divArray.def + divArray.divEnd;
+//     }
+//     return arrayString;
+// }

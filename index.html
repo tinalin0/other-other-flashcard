@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="js/gui.js"></script>
+    <script defer src="js/login.js"></script>
+    <script defer src="js/flashcard-storage-array.js"></script>
+    <script defer src="js/create-flashcards.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <div id="sign-up-div">
+        <h1>Become a Member of Flashcard Quizing</h1>
+        <hr>
+        <h2>Fill in the form to become a member.</h2>
+
+        <p class="input-label">Username: </p>
+        <input id="username" type="text" />
+  
+        <p class="input-label">Password: </p>
+        <input id="password" type="password" />
+  
+        <p class="input-label">Confirm Password: </p>
+        <input id="conf-password" type="password" />
+  
+        <p>
+          <button id="sign-up-btn">Sign Up</button>
+        </p>
+
+        <p>Already a Member?
+            <span id="sign-in-link" class="link">Sign In Here.</span>
+        </p>
+    </div>
+
+    <div id="login-div">
+        <h1>Hello.</h1>
+        <hr>
+        <h2>Fill out form to sign in to your account.</h2>
+
+        <p class="input-label">Username: </p>
+        <input id="userIn" type="text" />
+  
+        <p class="input-label">Password: </p>
+        <input id="passIn" type="password" />
+  
+        <p>
+          <button id="sign-in-btn">Sign In</button>
+        </p>
+
+        <p>Not a Member?
+            <span id="sign-up-link" class="link">Sign up Here.</span>
+        </p>
+
+    </div>
+
+    <div id="home-div">
+        <h1>Welcome to the Home Page</h1>
+        <hr>
+
+        <button class="home-btn">Home</button>
+        <button class="flashcards-btn">Flashcards</button>
+
+        <!-- Instructions -->
+        <h2>How to create a flashcard set</h2>
+
+        <!-- Public Sets -->
+        <div id="public-sets">
+            <h2>Public Sets</h2>
+        </div>
+    </div>
+
+    <div id="flashcards-div">
+        <h1>Welcome to Flashcards</h1>
+        <hr>
+
+        <button class="home-btn">Home</button>
+        <button class="flashcards-btn">Flashcards</button>
+        <hr>
+
+        <!-- Create Flashcards -->
+        <button id="create-btn">CREATE</button>
+
+        <!-- Choose Flashcards -->
+        <button id="choose-btn">CHOOSE</button>
+
+        <div id="new-flashcards">
+
+        </div>
+        <button>See more</button>
+    </div>
+
+    <div id="create-flashcards-div">
+        <input id="title-text" type="text" placeholder= "Title"/>
+        <button id="private-btn">Private</button>
+        <button id="public-btn">Public</button>
+        <hr>
+
+        <div id="new-cards"></div>
+
+        <!-- Add Cards -->
+        <button id="add-card-btn">Add Card</button>
+        
+        <!-- Create Deck -->
+        <button id="create-deck-btn">Create</button>
+    </div>
+
+    <div id="all-flashcards-div">
+
+    </div>
+</body>
+</html>
