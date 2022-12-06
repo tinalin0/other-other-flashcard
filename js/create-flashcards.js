@@ -35,20 +35,30 @@ function createNewCard(div, term, def) {
 function createDeck() {
     // Get the properties of each array object
     for (let i = 0; i < divArray.length; i++) {
-        let termVal = eValue(i, "term");
-        let defVal = eValue(i, "def");
+        let termVal = elValue(i, "term");
+        let defVal = elValue(i, "def");
 
         // Push into array
+        divArray.splice(i, 1, makeProperty(termVal, defVal));
     }
      // Get the Public or Private
 
     // Push into correct storage
+
+    // Clear this Div
 }
 
 // Helper Functions for Creating New Decks
 function elValue(i, element) {
     let elValue = document.getElementById(`${element}-${i}`);
     return elValue.value;
+}
+
+function makeProperty(termVal, defVal) {
+    return{
+        term: termVal,
+        def: defVal,
+    }
 }
 
 function updateDiv(i, term, def) {
