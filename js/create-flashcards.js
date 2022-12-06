@@ -37,10 +37,9 @@ function createDeck() {
     for (let i = 0; i < divArray.length; i++) {
         let termVal = eValue(i, "term");
         let defVal = eValue(i, "def");
-    }
-    // Push into array
-    
 
+        // Push into array
+    }
      // Get the Public or Private
 
     // Push into correct storage
