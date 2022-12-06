@@ -4,6 +4,7 @@ let divArray = [];
 function addNewCard() {
     // update divArray
     createNewEl(divArray.length);
+    divArray.push(divArray.length);
 }
 
 // Helper Functions for Adding Cards
@@ -32,8 +33,17 @@ function createNewCard(div, term, def) {
 
 
 function createDeck() {
+    // Get the properties of each array object
+    for (let i = 0; i < divArray.length; i++) {
+        let termVal = eValue(i, "term");
+        let defVal = eValue(i, "def");
+    }
+    // Push into array
+    
 
-    cardDiv.innerHTML = "";
+     // Get the Public or Private
+
+    // Push into correct storage
 }
 
 // Helper Functions for Creating New Decks
