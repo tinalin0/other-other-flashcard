@@ -1,5 +1,5 @@
 // Global Variables
-let login = false;
+let login = 0;
 
 // Global Arrays
 let users = loadUsers();

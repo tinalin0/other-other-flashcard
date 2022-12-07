@@ -9,7 +9,7 @@ function signUpHandler() {
     } else {
       users.push(newUser(userName, passWord));
       alert("Sign up completed");
-      login = true;
+      login = userName;
       displayHomeDiv();
     }
   }
@@ -25,7 +25,7 @@ function signInHandler() {
     let ans = checkPass(index, passIn);
     if (ans >= 0) {
       alert("Login Successful");
-      login = true;
+      login = userIn;
       displayHomeDiv();
     } else {
       alert ("Login Unsuccesful");
