@@ -71,4 +71,5 @@ createDeckBtn.addEventListener("click", createDeck);
 
 // Get Private or Public and Clearing
 let displayValMenu = document.getElementById("displayVal-menu");
+let titleVal = document.getElementById("title-text");
 createDeckBtn.addEventListener("click", displayValHandler);
