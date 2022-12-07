@@ -65,11 +65,10 @@ newCardBtn.addEventListener("click", addNewCard);
 
 
 let createDeckBtn = document.getElementById("create-deck-btn");
-
-// Get Private or Public
-let displayValMenu = document.getElementById("displayVal-menu");
-createDeckBtn.addEventListener("click", displayValHandler);
-
 // Creating Deck
 createDeckBtn.addEventListener("click", displayHomeDiv);
 createDeckBtn.addEventListener("click", createDeck);
+
+// Get Private or Public and Clearing
+let displayValMenu = document.getElementById("displayVal-menu");
+createDeckBtn.addEventListener("click", displayValHandler);
