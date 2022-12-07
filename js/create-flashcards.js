@@ -67,12 +67,22 @@ function updateDiv(i, term, def) {
 // Push into Correct Array
 function displayValHandler() {
     let selection = displayValMenu.value;
+    LET 
 
     if (selection === "priv") {
-        privateArray.push(divArray);
+        privateArray.push(addDeck(titleVal.value, divArray));
     } else {
-        publicArray.push(divArray);
+        publicArray.push(addDeck(titleVal.value, divArray));
     }
     cardDiv.innerHTML = '';
     divArray = [];
 }
+
+function addDeck(title, array) {
+    return {
+        title: title,
+        array: array,
+    }
+}
+
+// need to add User that array belongs to
