@@ -53,17 +53,23 @@ for (let i = 0; i < flashcardsBtn.length; i++) {
 
 // Swtich to Creating Cards
 
-// Variables
+// Display Create Div
 let createDiv = document.getElementById("create-flashcards-div");
 let createDivBtn = document.getElementById("create-btn");
 
 createDivBtn.addEventListener("click", displayCreateDiv);
 
+// Create new Card
 let newCardBtn = document.getElementById("add-card-btn");
-
 newCardBtn.addEventListener("click", addNewCard);
+
 
 let createDeckBtn = document.getElementById("create-deck-btn");
 
+// Get Private or Public
+let displayValMenu = document.getElementById("displayVal-menu");
+createDeckBtn.addEventListener("click", displayValHandler);
+
+// Creating Deck
 createDeckBtn.addEventListener("click", displayHomeDiv);
 createDeckBtn.addEventListener("click", createDeck);

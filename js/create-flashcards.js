@@ -31,7 +31,6 @@ function createNewCard(div, term, def) {
     div.appendChild(def);
 }
 
-
 function createDeck() {
     // Get the properties of each array object
     for (let i = 0; i < divArray.length; i++) {
@@ -41,11 +40,6 @@ function createDeck() {
         // Push into array
         divArray.splice(i, 1, makeProperty(termVal, defVal));
     }
-     // Get the Public or Private
-
-    // Push into correct storage
-
-    // Clear this Div
 }
 
 // Helper Functions for Creating New Decks
@@ -67,4 +61,18 @@ function updateDiv(i, term, def) {
         term: term,
         def: def,
     };
+}
+
+// Get Public Or Private
+// Push into Correct Array
+function displayValHandler() {
+    let selection = displayValMenu.value;
+
+    if (selection === "priv") {
+        privateArray.push(divArray);
+    } else {
+        publicArray.push(divArray);
+    }
+    cardDiv.innerHTML = '';
+    divArray = [];
 }
