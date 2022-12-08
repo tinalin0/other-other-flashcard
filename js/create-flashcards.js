@@ -67,12 +67,13 @@ function updateDiv(i, term, def) {
 // Push into Correct Array
 function displayValHandler() {
     let selection = displayValMenu.value;
-    LET 
 
     if (selection === "priv") {
         privateArray.push(addDeck(titleVal.value, divArray));
+        saveDecksPriv();
     } else {
         publicArray.push(addDeck(titleVal.value, divArray));
+        saveDecksPub();
     }
     cardDiv.innerHTML = '';
     divArray = [];

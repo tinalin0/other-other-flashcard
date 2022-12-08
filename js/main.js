@@ -73,3 +73,13 @@ createDeckBtn.addEventListener("click", createDeck);
 let displayValMenu = document.getElementById("displayVal-menu");
 let titleVal = document.getElementById("title-text");
 createDeckBtn.addEventListener("click", displayValHandler);
+
+// Loading and Storing of Flashcards
+
+// Public Sets of Flashcards
+let publicArray = loadDecksPub();
+// Name - Terms and Definitions
+
+// Private Sets of Flashcards
+let privateArray = loadDecksPriv();
+// Account, Name - Terms and Definitions
