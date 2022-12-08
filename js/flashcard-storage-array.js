@@ -1,7 +1,3 @@
-function displayAll() {
-    
-}
-
 function saveDecksPub() {
   localStorage.setItem("publicArray", JSON.stringify(publicArray))
 }
