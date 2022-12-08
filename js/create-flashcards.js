@@ -69,21 +69,20 @@ function displayValHandler() {
     let selection = displayValMenu.value;
 
     if (selection === "priv") {
-        privateArray.push(addDeck(titleVal.value, divArray));
+        privateArray.push(addDeck(login, titleVal.value, divArray));
         saveDecksPriv();
     } else {
-        publicArray.push(addDeck(titleVal.value, divArray));
+        publicArray.push(addDeck(login, titleVal.value, divArray));
         saveDecksPub();
     }
     cardDiv.innerHTML = '';
     divArray = [];
 }
 
-function addDeck(title, array) {
+function addDeck(user, title, array) {
     return {
+        user: user,
         title: title,
         array: array,
     }
 }
-
-// need to add User that array belongs to
