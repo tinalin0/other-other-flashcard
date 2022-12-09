@@ -18,7 +18,12 @@ function loadDecksPriv() {
 
 // Display all the Sets
 function displayAllSets(array) {
-  
+  createDisplay();
+  for (let i = 0; i < array.length; i++) {
+    for (let t = 0; t < array[i].set.length; t++) {
+      
+    }
+  }
 }
 
 // Helper Functions
