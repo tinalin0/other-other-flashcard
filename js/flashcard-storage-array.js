@@ -19,19 +19,19 @@ function loadDecksPriv() {
 
 // Display all the public Sets
 function displayAllPub(array) {
-  for (let i = 0; i < array.length; i++) {
 
-  }
 }
 
 // Helper Functions
+// Create Elements to Display them in
+
 // Loop though all the Arrays
 
-// Create Elements to Display them in
+// Set Array Variables as Elements
+
 
 
 // Display Private Sets of the User
-
 
 // Helper Functions
 // Loop through all of the Arrays
