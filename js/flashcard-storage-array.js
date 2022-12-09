@@ -16,26 +16,28 @@ function loadDecksPriv() {
   return JSON.parse(privateStr) ?? [];
 }
 
-
-// Display all the public Sets
-function displayAllPub(array) {
+// Display all the Sets
+function displayAllArrays(array) {
 
 }
 
 // Helper Functions
-// Create Elements to Display them in
-
-// Loop though all the Arrays
-
-// Set Array Variables as Elements
-
-
-
-// Display Private Sets of the User
+function findArraysWithUser(array) {
+  let userSetsArray = [];
+  // Loop through all of the Arrays
+  for (let i = 0; i < array.length; i++) {
+    // Find the right user;
+    if (array[i].user === login) {
+      userSetsArray.push(login);
+    }
+  }
+}
 
 // Helper Functions
-// Loop through all of the Arrays
+function createDisplay() {
+  // Create Elements to Display them in
 
-// Find the One with the right User
+  // Loop though all the Arrays
 
-// Create element to display it in
+// Set Array Variables as Elements
+}
