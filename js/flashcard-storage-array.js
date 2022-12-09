@@ -17,8 +17,8 @@ function loadDecksPriv() {
 }
 
 // Display all the Sets
-function displayAllArrays(array) {
-
+function displayAllSets(array) {
+  
 }
 
 // Helper Functions
@@ -31,11 +31,13 @@ function findArraysWithUser(array) {
       userSetsArray.push(login);
     }
   }
+  displayAllSets(userSetsArray);
 }
 
 // Helper Functions
 function createDisplay() {
   // Create Elements to Display them in
+  
 
   // Loop though all the Arrays
 
