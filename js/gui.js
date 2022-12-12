@@ -1,3 +1,4 @@
+// Switch between sign in and login
 function displaySignUp() {
     signUpDiv.style.display = "block";
     signInDiv.style.display = "none";
@@ -14,6 +15,7 @@ function displaySignIn() {
     createDiv.style.display = "none";
 }
 
+// Swtich between Home and 
 function displayHomeDiv() {
     signUpDiv.style.display = "none";
     signInDiv.style.display = "none";
