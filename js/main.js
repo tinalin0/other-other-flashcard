@@ -57,7 +57,7 @@ for (let i = 0; i < flashcardsBtn.length; i++) {
 let createDiv = document.getElementById("create-flashcards-div");
 let createDivBtn = document.getElementById("create-btn");
 
-createDivBtn.addEventListener("click", displayCreateDiv);
+createDivBtn.addEventListener("click",displayCreateDiv);
 
 // Create new Card
 let newCardBtn = document.getElementById("add-card-btn");
@@ -83,3 +83,12 @@ let publicArray = loadDecksPub();
 // Private Sets of Flashcards
 let privateArray = loadDecksPriv();
 // Account, Name - Terms and Definitions
+
+// Switching to Choosing
+let chooseBtn = document.getElementById("choose-btn");
+let chooseDiv = document.getElementById("private-sets");
+chooseBtn.addEventListener("click", display3Sets);
+
+let allBtn = document.getElementById("see-all-btn");
+let allSets = document.getElementById("all-private-sets")
+allBtn.addEventListener("click", displayAllPrivateSets);
