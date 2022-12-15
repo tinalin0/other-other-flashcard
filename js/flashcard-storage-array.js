@@ -20,11 +20,29 @@ function loadDecksPriv() {
 let publicDiv = document.getElementById("public-sets");
 let privateDiv = document.getElementById("private-sets");
 
-// Display all the Flashcards
+// Display 3 Sets
+function display3Sets() {
+  
+}
+
+// Display all the Sets
 function displayAllSets(array, where) {
   for (let i = 0; i < array.length; i++) {
     createDisplay(i, array[i].user, array[i].title, where);
   }
+}
+
+// Helper Functions - Private
+function displayPrivateSets(array) {
+  let userSetsArray = [];
+  // Loop through all of the Arrays
+  for (let i = 0; i < array.length; i++) {
+    // Find the right user;
+    if (array[i].user === login) {
+      userSetsArray.push(login);
+    }
+  }
+  displayAllSets(userSetsArray, "private");
 }
 
 // Helper Functions
@@ -52,6 +70,8 @@ function createDisplay(i, user, title, where) {
 
 }
 
+
+// Display Flashcards of Set Clicked
 function displayAllFlash(array, i) {
   for (let t = 0; t < array[i].set.length; t++) {
     createFlashDisplay(t, array[i].set[t].term, array[i].set[t].def);
@@ -75,17 +95,4 @@ function createFlashDisplay(div, i, term, definition) {
   // Set Array Variables as Elements
 
 
-}
-
-// Helper Functions - Private
-function findArraysWithUser(array) {
-  let userSetsArray = [];
-  // Loop through all of the Arrays
-  for (let i = 0; i < array.length; i++) {
-    // Find the right user;
-    if (array[i].user === login) {
-      userSetsArray.push(login);
-    }
-  }
-  displayAllSets(userSetsArray, "private");
 }

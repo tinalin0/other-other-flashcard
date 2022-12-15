@@ -84,11 +84,18 @@ let publicArray = loadDecksPub();
 let privateArray = loadDecksPriv();
 // Account, Name - Terms and Definitions
 
-// Switching to Choosing
+// Private Set Displays
+// Display 3 Private Sets of User
 let chooseBtn = document.getElementById("choose-btn");
 let chooseDiv = document.getElementById("private-sets");
-chooseBtn.addEventListener("click", display3Sets);
+chooseBtn.addEventListener("click", display3Sets(privateArray, "private"));
 
+// Display All Private Sets of User
 let allBtn = document.getElementById("see-all-btn");
 let allSets = document.getElementById("all-private-sets")
-allBtn.addEventListener("click", displayAllPrivateSets);
+allBtn.addEventListener("click", displayPrivateSets(privateArray));
+
+
+// Public Set Displays
+// Onload display 3 public
+// On click display all public
