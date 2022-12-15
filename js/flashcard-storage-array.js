@@ -18,30 +18,63 @@ function loadDecksPriv() {
 
 // Variables
 let publicDiv = document.getElementById("public-sets");
-let privateSets = document.getElementById("private-sets");
+let privateDiv = document.getElementById("private-sets");
 
-// Display all the Sets
-function displayAllSets(array) {
-  createDisplay();
+// Display all the Flashcards
+function displayAllSets(array, where) {
   for (let i = 0; i < array.length; i++) {
-    for (let t = 0; t < array[i].set.length; t++) {
-      createContainer(t, array[i].set[t].term, array[i].set[t].def);
-    }
+    createDisplay(i, array[i].user, array[i].title, where);
   }
 }
 
 // Helper Functions
-function createDisplay() {
+function createDisplay(i, user, title, where) {
   // Create Elements to Display them in
-  
+  let newDiv = document.createElement("div");
+  let newTitle = document.creatElement("p");
+  let newUser = document.createElement("p")
 
-  // Loop though all the Arrays
+  // Append Elements
+  if (where === "private"){
+    newDiv.appendElement(publicDiv);
+  } else {
+    newDiv.appendElement(privateDiv);
+  }
+
+  newDiv.appendElement(newTitle);
+  newDiv.appendElement(newUser);
+
+  // Set IDS
+
 
   // Set Array Variables as Elements
+
+
 }
 
-function createContainer(i, term, definition) {
+function displayAllFlash(array, i) {
+  for (let t = 0; t < array[i].set.length; t++) {
+    createFlashDisplay(t, array[i].set[t].term, array[i].set[t].def);
+  }
+}
+
+function createFlashDisplay(div, i, term, definition) {
+  // Create Element
+  let newCardDiv = document.createElement("div");
+  let termContainer = document.createElement("p");
+  let defContainer = document.createElement("p");
+
+  // Append Elements
+  div.appendElement(newCardDiv);
+  newCardDiv.appendElement(termContainer);
+  newCardDiv.appendElement(defContainer);
+
+  // Set IDS
+
   
+  // Set Array Variables as Elements
+
+
 }
 
 // Helper Functions - Private
@@ -54,5 +87,5 @@ function findArraysWithUser(array) {
       userSetsArray.push(login);
     }
   }
-  displayAllSets(userSetsArray);
+  displayAllSets(userSetsArray, "private");
 }
