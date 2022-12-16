@@ -63,11 +63,11 @@ function createDisplay(i, user, title, where) {
   newDiv.appendElement(newUser);
 
   // Set IDS
-
+  newDiv.id = "array" + i;
 
   // Set Array Variables as Elements
-
-
+  newTitle.innerHTML = title;
+  newUser.innerHTML = user;
 }
 
 
@@ -81,18 +81,33 @@ function displayAllFlash(array, i) {
 function createFlashDisplay(div, i, term, definition) {
   // Create Element
   let newCardDiv = document.createElement("div");
+  let newTermDiv = document.createElement("div");
   let termContainer = document.createElement("p");
+  let newDefDiv = document.createElement("div");
   let defContainer = document.createElement("p");
 
+  let termBtn = document.createEleemnt("BUTTON");
+  let defBtn = document.createElement("BUTTON")
+
   // Append Elements
-  div.appendElement(newCardDiv);
-  newCardDiv.appendElement(termContainer);
-  newCardDiv.appendElement(defContainer);
+  div.appendElement(newCardDiv);  
+
+  newCardDiv.appendElement(newTermDiv);
+  newCardDiv.appendElement(newDefDiv);
+
+  newTermDiv.appendChild(termContainer);
+  newDefDiv.appendChild(defContainer);
+
+  newTermDiv.appendChild(termBtn);
+  newDefDiv.appendChild(defBtn);
 
   // Set IDS
-
+  newCardDiv.id = "card" + i;
+  termBtn.id = "termBtn-" + i
+  defBtn.id = "defBtn-" + i
   
   // Set Array Variables as Elements
-
+  termContainer.innerHTML = term;
+  defContainer.innerHTML = def;
 
 }
