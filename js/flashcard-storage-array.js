@@ -102,7 +102,7 @@ function createFlashDisplay(i, term, definition) {
   newDefDiv.appendChild(defBtn);
 
   // Set IDS
-  newCardDiv.id = "card" + i;
+  newCardDiv.id = "card-" + i;
   termBtn.id = "termBtn-" + i
   defBtn.id = "defBtn-" + i
   
