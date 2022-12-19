@@ -78,7 +78,7 @@ function displayAllFlash(array, i) {
   }
 }
 
-function createFlashDisplay(div, i, term, definition) {
+function createFlashDisplay(i, term, definition) {
   // Create Element
   let newCardDiv = document.createElement("div");
   let newTermDiv = document.createElement("div");
@@ -108,6 +108,5 @@ function createFlashDisplay(div, i, term, definition) {
   
   // Set Array Variables as Elements
   termContainer.innerHTML = term;
-  defContainer.innerHTML = def;
-
+  defContainer.innerHTML = definition;
 }
