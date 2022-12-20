@@ -85,4 +85,4 @@ function addDeck(user, title, array) {
         title: title,
         set: array,
     }
-}  
+}

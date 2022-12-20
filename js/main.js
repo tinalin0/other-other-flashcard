@@ -18,21 +18,19 @@ let signUpLink = document.getElementById("sign-up-link");
 let signInBtn = document.getElementById('sign-in-btn');
 let signUpBtn = document.getElementById('sign-up-btn');
 
-// Event Listeners
+// Login Gui Event Listeners
 
 // SIGN UP BTN CLICKED
 signUpBtn.addEventListener("click", signUpHandler);
-
 // SIGN IN BTN CLICKED
 signInBtn.addEventListener("click", signInHandler);
 
 // Switch Logins
 signUpLink.addEventListener("click", displaySignUp);
-
 signInLink.addEventListener("click", displaySignIn);
 
 
-// Switch Flashcard and Home 
+// Switch Flashcard and Home
 
 // Home Variables
 let homeDiv = document.getElementById("home-div");
@@ -63,9 +61,8 @@ createDivBtn.addEventListener("click",displayCreateDiv);
 let newCardBtn = document.getElementById("add-card-btn");
 newCardBtn.addEventListener("click", addNewCard);
 
-
-let createDeckBtn = document.getElementById("create-deck-btn");
 // Creating Deck
+let createDeckBtn = document.getElementById("create-deck-btn");
 createDeckBtn.addEventListener("click", displayHomeDiv);
 createDeckBtn.addEventListener("click", createDeck);
 
@@ -75,27 +72,26 @@ let titleVal = document.getElementById("title-text");
 createDeckBtn.addEventListener("click", displayValHandler);
 
 // Loading and Storing of Flashcards
-
 // Public Sets of Flashcards
 let publicArray = loadDecksPub();
-// Name - Terms and Definitions
 
 // Private Sets of Flashcards
 let privateArray = loadDecksPriv();
-// Account, Name - Terms and Definitions
 
 // Private Set Displays
+let privateDiv = document.getElementById("private-sets");
 // Display 3 Private Sets of User
 let chooseBtn = document.getElementById("choose-btn");
-let chooseDiv = document.getElementById("private-sets");
 chooseBtn.addEventListener("click", display3Sets(privateArray, "private"));
-
 // Display All Private Sets of User
-let allBtn = document.getElementById("see-all-btn");
+let allPrivBtn = document.getElementById("see-all-priv-btn");
 let allSets = document.getElementById("all-private-sets")
-allBtn.addEventListener("click", displayPrivateSets(privateArray));
-
+allPrivBtn.addEventListener("click", displayPrivateSets(privateArray));
 
 // Public Set Displays
+let publicDiv = document.getElementById("private-sets");
 // Onload display 3 public
+document.addEventListener("load", display3Sets(publicArray, "public"));
 // On click display all public
+let allPubBtn = document.getElementById("see-all-pub-btn");
+allPubBtn.addEventListener("click", displayAllSets(publicArray, "public"));

@@ -16,10 +16,6 @@ function loadDecksPriv() {
   return JSON.parse(privateStr) ?? [];
 }
 
-// Variables
-let publicDiv = document.getElementById("public-sets");
-let privateDiv = document.getElementById("private-sets");
-
 // Display 3 Sets
 function display3Sets() {
   
