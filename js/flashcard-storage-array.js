@@ -45,18 +45,18 @@ function displayPrivateSets(array) {
 function createDisplay(i, user, title, where) {
   // Create Elements to Display them in
   let newDiv = document.createElement("div");
-  let newTitle = document.creatElement("p");
+  let newTitle = document.createElement("p");
   let newUser = document.createElement("p")
 
   // Append Elements
   if (where === "private"){
-    newDiv.appendElement(publicDiv);
+    newDiv.appendChild(publicDiv);
   } else {
-    newDiv.appendElement(privateDiv);
+    newDiv.appendChild(privateDiv);
   }
 
-  newDiv.appendElement(newTitle);
-  newDiv.appendElement(newUser);
+  newDiv.appendChild(newTitle);
+  newDiv.appendChild(newUser);
 
   // Set IDS
   newDiv.id = "array" + i;
@@ -86,10 +86,10 @@ function createFlashDisplay(i, term, definition) {
   let defBtn = document.createElement("BUTTON")
 
   // Append Elements
-  div.appendElement(newCardDiv);  
+  div.appendChild(newCardDiv);  
 
-  newCardDiv.appendElement(newTermDiv);
-  newCardDiv.appendElement(newDefDiv);
+  newCardDiv.appendChild(newTermDiv);
+  newCardDiv.appendChild(newDefDiv);
 
   newTermDiv.appendChild(termContainer);
   newDefDiv.appendChild(defContainer);

@@ -89,7 +89,7 @@ let allSets = document.getElementById("all-private-sets")
 allPrivBtn.addEventListener("click", displayPrivateSets(privateArray));
 
 // Public Set Displays
-let publicDiv = document.getElementById("private-sets");
+let publicDiv = document.getElementById("public-sets");
 // Onload display 3 public
 document.addEventListener("load", display3Sets(publicArray, "public"));
 // On click display all public
