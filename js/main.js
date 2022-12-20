@@ -95,3 +95,6 @@ document.addEventListener("load", display3Sets(publicArray, "public"));
 // On click display all public
 let allPubBtn = document.getElementById("see-all-pub-btn");
 allPubBtn.addEventListener("click", displayAllSets(publicArray, "public"));
+
+
+// Display Sets Clicked
