@@ -47,6 +47,13 @@ function createDisplay(i, user, title, where) {
   let newDiv = document.createElement("div");
   let newTitle = document.createElement("p");
   let newUser = document.createElement("p")
+  
+  // Set IDS
+  newDiv.id = "array" + i;
+
+  // Set Array Variables as Elements
+  newTitle.innerHTML = title;
+  newUser.innerHTML = user;
 
   // Append Elements
   if (where === "private"){
@@ -57,13 +64,6 @@ function createDisplay(i, user, title, where) {
 
   newDiv.appendChild(newTitle);
   newDiv.appendChild(newUser);
-
-  // Set IDS
-  newDiv.id = "array" + i;
-
-  // Set Array Variables as Elements
-  newTitle.innerHTML = title;
-  newUser.innerHTML = user;
 }
 
 
