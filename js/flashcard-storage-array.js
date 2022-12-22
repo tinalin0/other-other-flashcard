@@ -37,7 +37,7 @@ function displayPrivateSets(array, num) {
   for (let i = 0; i < array.length; i++) {
     // Find the right user;
     if (array[i].user === login) {
-      userSetsArray.push(login);
+      userSetsArray.push(array[i]);
     }
   }
   // Display 3 or all
