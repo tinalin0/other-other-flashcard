@@ -59,9 +59,11 @@ function createDisplay(i, user, title, where) {
 
   // Append Elements
   if (where === "private"){
-    newDiv.appendChild(publicDiv);
+    publicDiv.appendChild(newDiv);
+  } else if (where === "public"){
+    privateDiv.appendChild(newDiv);
   } else {
-    newDiv.appendChild(privateDiv);
+    where.appendChild(newDiv);
   }
 
   newDiv.appendChild(newTitle);
