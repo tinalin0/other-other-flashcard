@@ -1,3 +1,14 @@
+// Private of the User
+function searchPriv() {
+  // Loop through all of the Arrays
+  for (let i = 0; i < array.length; i++) {
+    // Find the right user;
+    if (array[i].user === login) {
+      userSetsArray.push(array[i]);
+    }
+  }
+}
+
 function saveDecksPub() {
   localStorage.setItem("publicArray", JSON.stringify(publicArray))
 }
@@ -27,24 +38,7 @@ function display3Sets(array, where) {
 function displayAllSets(array, where) {
   for (let i = 0; i < array.length; i++) {
     createDisplay(i, array[i].user, array[i].title, where);
-  }
-}
-
-// Helper Functions - Private
-function displayPrivateSets(array, num) {
-  let userSetsArray = [];
-  // Loop through all of the Arrays
-  for (let i = 0; i < array.length; i++) {
-    // Find the right user;
-    if (array[i].user === login) {
-      userSetsArray.push(array[i]);
-    }
-  }
-  // Display 3 or all
-  if(num === "all-sets") {
-    displayAllSets(userSetsArray, allPrivSets);
-  } else {
-    display3Sets(userSetsArray, privateDiv)
+    createDisplay(i, array[i].user, array[i].title, where);
   }
 }
 

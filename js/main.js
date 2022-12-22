@@ -78,15 +78,18 @@ let publicArray = loadDecksPub();
 // Private Sets of Flashcards
 let privateArray = loadDecksPriv();
 
+// Priv of User
+let userSetsArray = [];
+
 // Private Set Displays
 let privateDiv = document.getElementById("private-sets");
 // Display 3 Private Sets of User
 let chooseBtn = document.getElementById("choose-btn");
-chooseBtn.addEventListener("click", displayPrivateSets(privateArray, 3));
+chooseBtn.addEventListener("click", display3Sets(userSetsArray, 3));
 // Display All Private Sets of User
 let allPrivBtn = document.getElementById("see-all-priv-btn");
 let allPrivSets = document.getElementById("all-private-sets")
-allPrivBtn.addEventListener("click", displayPrivateSets(privateArray, "all-sets"));
+allPrivBtn.addEventListener("click", displayAllSets(userSetsArray, "all-sets"));
 
 // Public Set Displays
 let publicDiv = document.getElementById("public-sets");
