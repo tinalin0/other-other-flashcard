@@ -17,8 +17,10 @@ function loadDecksPriv() {
 }
 
 // Display 3 Sets
-function display3Sets() {
-  
+function display3Sets(array, where) {
+  for (let i = 0; i < 2; i++) {
+    createDisplay(i, array[i].user, array[i].title, where);
+  }
 }
 
 // Display all the Sets
