@@ -80,24 +80,25 @@ let privateArray = loadDecksPriv();
 
 // Priv of User
 let userSetsArray = [];
+// once logged in, seach for users sets
 
 // Private Set Displays
 let privateDiv = document.getElementById("private-sets");
 
 // Display 3 Private Sets of User
 let chooseBtn = document.getElementById("choose-btn");
-chooseBtn.addEventListener("click", display3Sets(userSetsArray, 3));
+chooseBtn.addEventListener("click", display3Sets(userSetsArray, privateDiv));
 
 // Display All Private Sets of User
 let allPrivBtn = document.getElementById("see-all-priv-btn");
 let allPrivSets = document.getElementById("all-private-sets")
-allPrivBtn.addEventListener("click", displayAllSets(userSetsArray, "all-sets"));
+allPrivBtn.addEventListener("click", displayAllSets(userSetsArray, allPrivSets));
 
 // Public Set Displays
 let publicDiv = document.getElementById("public-sets");
 
 // Onload display 3 public
-document.addEventListener("load", display3Sets(publicArray, publicDiv));
+window.addEventListener("load", display3Sets(publicArray, publicDiv));
 
 // On click display all public
 let allPubBtn = document.getElementById("see-all-pub-btn");

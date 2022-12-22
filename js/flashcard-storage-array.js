@@ -1,10 +1,10 @@
 // Private of the User
 function searchPriv() {
   // Loop through all of the Arrays
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < privateArray.length; i++) {
     // Find the right user;
-    if (array[i].user === login) {
-      userSetsArray.push(array[i]);
+    if (privateArray[i].user === login) {
+      userSetsArray.push(privateArray[i]);
     }
   }
 }

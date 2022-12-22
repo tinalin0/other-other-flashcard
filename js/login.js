@@ -11,6 +11,7 @@ function signUpHandler() {
       alert("Sign up completed");
       login = userName;
       displayHomeDiv();
+      searchPriv();
     }
   }
   saveUsers();
@@ -27,6 +28,7 @@ function signInHandler() {
       alert("Login Successful");
       login = userIn;
       displayHomeDiv();
+      searchPriv();
     } else {
       alert ("Login Unsuccesful");
     }
