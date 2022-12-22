@@ -31,7 +31,7 @@ function displayAllSets(array, where) {
 }
 
 // Helper Functions - Private
-function displayPrivateSets(array) {
+function displayPrivateSets(array, num) {
   let userSetsArray = [];
   // Loop through all of the Arrays
   for (let i = 0; i < array.length; i++) {
@@ -40,7 +40,12 @@ function displayPrivateSets(array) {
       userSetsArray.push(login);
     }
   }
-  displayAllSets(userSetsArray, "private");
+  // Display 3 or all
+  if(num === "all-sets") {
+    displayAllSets(userSetsArray, allPrivSets);
+  } else {
+    display3Sets(userSetsArray, privateDiv)
+  }
 }
 
 // Helper Functions
@@ -58,13 +63,7 @@ function createDisplay(i, user, title, where) {
   newUser.innerHTML = user;
 
   // Append Elements
-  if (where === "private"){
-    publicDiv.appendChild(newDiv);
-  } else if (where === "public"){
-    privateDiv.appendChild(newDiv);
-  } else {
-    where.appendChild(newDiv);
-  }
+  where.appendChild(newDiv);
 
   newDiv.appendChild(newTitle);
   newDiv.appendChild(newUser);
