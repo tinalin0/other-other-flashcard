@@ -87,23 +87,23 @@ let privateDiv = document.getElementById("private-sets");
 
 // Display 3 Private Sets of User
 let chooseBtn = document.getElementById("choose-btn");
-chooseBtn.addEventListener("click", display3Sets(userSetsArray, privateDiv));
+chooseBtn.addEventListener("click", () => display3Sets(userSetsArray, privateDiv));
 
 // Display All Private Sets of User
 let allPrivBtn = document.getElementById("see-all-priv-btn");
 let allPrivSets = document.getElementById("all-private-sets")
-allPrivBtn.addEventListener("click", displayAllSets(userSetsArray, allPrivSets));
+allPrivBtn.addEventListener("click", () => displayAllSets(userSetsArray, allPrivSets));
 
 // Public Set Displays
 let publicDiv = document.getElementById("public-sets");
 
 // Onload display 3 public
-window.addEventListener("load", display3Sets(publicArray, publicDiv));
+window.addEventListener("load", () => display3Sets(publicArray, publicDiv));
 
 // On click display all public
 let allPubBtn = document.getElementById("see-all-pub-btn");
 let allPubSets = document.getElementById("all-public-sets");
-allPubBtn.addEventListener("click", displayAllSets(publicArray, allPubSets));
+allPubBtn.addEventListener("click", () => displayAllSets(publicArray, allPubSets));
 
 
 // Display Sets Clicked

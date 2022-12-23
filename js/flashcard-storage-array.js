@@ -37,7 +37,11 @@ function display3Sets(array, where) {
 // Display all the Sets
 function displayAllSets(array, where) {
   for (let i = 0; i < array.length; i++) {
-    createDisplay(i, array[i].user, array[i].title, where);
+    let divBtnEl = createDisplay(i, array[i].user, array[i].title, where);
+
+    // Detect if Div has been clicked
+    // Display flashcards if it has
+    divBtnEl.addEventListener("click", () => displayAllFlash(array, i));
   }
 }
 
@@ -60,6 +64,8 @@ function createDisplay(i, user, title, where) {
 
   newDiv.appendChild(newTitle);
   newDiv.appendChild(newUser);
+
+  return newDivBtn;
 }
 
 
