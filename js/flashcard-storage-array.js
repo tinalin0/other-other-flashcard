@@ -38,19 +38,18 @@ function display3Sets(array, where) {
 function displayAllSets(array, where) {
   for (let i = 0; i < array.length; i++) {
     createDisplay(i, array[i].user, array[i].title, where);
-    createDisplay(i, array[i].user, array[i].title, where);
   }
 }
 
 // Helper Functions
 function createDisplay(i, user, title, where) {
   // Create Elements to Display them in
-  let newDiv = document.createElement("div");
+  let newDivBtn = document.createElement("BUTTON");
   let newTitle = document.createElement("p");
   let newUser = document.createElement("p")
   
   // Set IDS
-  newDiv.id = "array" + i;
+  newDivBtn.id = "array" + i;
 
   // Set Array Variables as Elements
   newTitle.innerHTML = title;
