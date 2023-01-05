@@ -29,8 +29,10 @@ function loadDecksPriv() {
 
 // Display 3 Sets
 function display3Sets(array, where) {
-  for (let i = 0; i < 3; i++) {
-    createDisplay(i, array[i].user, array[i].title, where);
+  if (array.length >= 3) {
+    for (let i = 0; i < 3; i++) {
+      createDisplay(i, array[i].user, array[i].title, where);
+    }
   }
 }
 
@@ -41,7 +43,9 @@ function displayAllSets(array, where) {
 
     // Detect if Div has been clicked
     // Display flashcards if it has
-    divBtnEl.addEventListener("click", () => displayAllFlash(array, i));
+    divBtnEl.addEventListener("click",() => 
+      displayAllFlash(array, i)
+    );
   }
 }
 
