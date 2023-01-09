@@ -9,7 +9,7 @@ function searchPriv() {
   }
 }
 
-function saveDecksPub() {
+function saveDecksPub(publicArray) {
   localStorage.setItem('publicArray', JSON.stringify(publicArray))
 }
 
@@ -18,7 +18,7 @@ function loadDecksPub() {
   return JSON.parse(publicStr) ?? [];
 }
 
-function saveDecksPriv() {
+function saveDecksPriv(privateArray) {
   localStorage.setItem('privateArray', JSON.stringify(privateArray))
 }
 
@@ -31,14 +31,23 @@ function loadDecksPriv() {
 function display3Sets(array, where) {
   if (array.length === 1) {
     let i = 0;
-    createDisplay(i, array[i].user, array[i].title, where);
+    let divBtnEl = createDisplay(i, array[i].user, array[i].title, where);
+    divBtnEl.addEventListener("click",() => 
+      displayAllFlash(array, i)
+    );
   } else if (array.length === 2) {
     for (let i = 0; i < 2; i++) {
-      createDisplay(i, array[i].user, array[i].title, where);
+      let divBtnEl = createDisplay(i, array[i].user, array[i].title, where);
+      divBtnEl.addEventListener("click",() => 
+        displayAllFlash(array, i)
+      );
     }
   } else {
     for (let i = 0; i < 3; i++) {
-      createDisplay(i, array[i].user, array[i].title, where);
+      let divBtnEl = createDisplay(i, array[i].user, array[i].title, where);
+      divBtnEl.addEventListener("click",() => 
+        displayAllFlash(array, i)
+      );
     }
   }
 }
@@ -50,21 +59,20 @@ function displayAllSets(array, where) {
 
     // Detect if Div has been clicked
     // Display flashcards if it has
-    divBtnEl.addEventListener("click",() => 
-      displayAllFlash(array, i)
-    );
+    divBtnEl.addEventListener("click", () => displayAllFlash(array, i));
   }
 }
 
 // Helper Functions
 function createDisplay(i, user, title, where) {
-  // Create Elements to Display them in
+  // Create Elements to Display them in\
+  let newDiv = document.createElement("div");
   let newDivBtn = document.createElement("BUTTON");
   let newTitle = document.createElement("p");
   let newUser = document.createElement("p")
   
   // Set IDS
-  newDivBtn.id = "array" + i;
+  newDivBtn.id = "array-" + i;
 
   // Set Array Variables as Elements
   newTitle.innerHTML = title;
@@ -75,13 +83,15 @@ function createDisplay(i, user, title, where) {
 
   newDiv.appendChild(newTitle);
   newDiv.appendChild(newUser);
-
+  
+  console.log(newDivBtn.id);
   return newDivBtn;
 }
 
 
 // Display Flashcards of Set Clicked
 function displayAllFlash(array, i) {
+  console.log("display flashcards");
   for (let t = 0; t < array[i].set.length; t++) {
     createFlashDisplay(t, array[i].set[t].term, array[i].set[t].def);
   }

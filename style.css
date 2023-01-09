@@ -1,3 +1,18 @@
+/* Overall */
+html {
+    text-align: center;
+    background-color: #f4d7de;
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+    color: #a4d4dc;
+}
+
+hr {
+    border: 2px solid #bfd1d0;
+}
 
 /* LOGIN AND SIGNIN */
 #sign-up-div {

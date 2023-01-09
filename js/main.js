@@ -113,5 +113,4 @@ allPubBtn.addEventListener("click",() =>
     displayAllSets(publicArray, allPubSets)
 );
 
-
-// Display Sets Clicked
+// Display all Sets Clicked

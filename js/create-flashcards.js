@@ -22,7 +22,7 @@ function createNewEl(i) {
     defInput.setAttribute("type", "text");
     defInput.setAttribute("placeholder", "Definition")
 
-    createNewCard(newDiv, termInput, defInput)
+    createNewCard(newDiv, termInput, defInput);
 }
 
 function createNewCard(div, term, def) {
@@ -70,10 +70,10 @@ function displayValHandler() {
 
     if (selection === "priv") {
         privateArray.push(addDeck(login, titleVal.value, divArray));
-        saveDecksPriv();
+        saveDecksPriv(privateArray);
     } else {
         publicArray.push(addDeck(login, titleVal.value, divArray));
-        saveDecksPub();
+        saveDecksPub(publicArray);
     }
     cardDiv.innerHTML = '';
     divArray = [];
